@@ -1,0 +1,51 @@
+.contact-wrap {
+  text-align: center;
+  max-width: 640px;
+}
+
+.lede {
+  font-size: 1.05rem;
+  margin: 0 auto 2.5rem;
+  max-width: 50ch;
+}
+
+.contact-card {
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 2.25rem;
+  text-align: left;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed var(--border-soft);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+.contact-row:last-child {
+  border-bottom: none;
+}
+.contact-row i {
+  color: var(--accent);
+  width: 20px;
+  flex-shrink: 0;
+}
+.contact-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.contact-row.static {
+  color: var(--text-muted);
+}
+.contact-row.static i {
+  color: var(--text-faint);
+}
+
+@media (max-width: 767.98px) {
+  .contact-row {
+    font-size: 0.86rem;
+  }
+}

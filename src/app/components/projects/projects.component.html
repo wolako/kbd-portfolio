@@ -1,0 +1,38 @@
+<section id="projects">
+  <div class="container-narrow">
+    <div class="eyebrow">ps aux | grep projets</div>
+    <h2 class="section-title">Projets</h2>
+
+    <div class="projects-grid">
+      <div
+        class="project-card card-console"
+        *ngFor="let p of projects; let i = index"
+        [class.featured]="p.featured"
+        appReveal
+        [appRevealDelay]="i * 100"
+      >
+        <div class="project-head">
+          <h3 class="project-name">{{ p.name }}</h3>
+          <span class="badge" [class.live]="p.status === 'live'" [class.dev]="p.status === 'development'">
+            <span class="status-dot" *ngIf="p.status === 'live'"></span>
+            {{ statusLabel(p) }}
+          </span>
+        </div>
+        <div class="project-tagline">{{ p.tagline }}</div>
+        <p class="project-desc">{{ p.description }}</p>
+        <div class="project-stack">
+          <span class="tag" *ngFor="let t of p.stack">{{ t }}</span>
+        </div>
+        <a
+          *ngIf="p.link"
+          class="btn-console primary project-link"
+          [href]="p.link"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ p.linkLabel }} <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

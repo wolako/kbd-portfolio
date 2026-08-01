@@ -1,0 +1,38 @@
+<section id="about">
+  <div class="container-narrow about-grid">
+    <div class="about-copy" appReveal>
+      <div class="eyebrow">about.md</div>
+      <h2 class="section-title">D'administrateur systèmes à développeur web</h2>
+      <p>
+        Je suis administrateur systèmes et réseaux : administration de
+        serveurs (Linux, Windows Server), virtualisation (Proxmox, VMware
+        ESXi) et supervision d'infrastructures (Prometheus, Grafana). Au
+        total, cela représente environ 3 ans d'expérience en administration
+        systèmes et réseaux.
+      </p>
+      <p>
+        En parallèle, je me suis formé en autodidacte au développement web —
+        Angular côté interface, Node.js / Express côté serveur — à travers
+        plusieurs projets personnels, dont une plateforme de réservation de
+        billets de bus aujourd'hui en ligne. Depuis 2024, j'approfondis cette
+        double compétence avec Python et les outils de développement assisté
+        par IA comme Claude Code.
+      </p>
+      <p>
+        Je recherche aujourd'hui un poste où cette double compétence —
+        rigueur d'administrateur systèmes et sens du développement web —
+        peut être mise à profit, idéalement dans un environnement international.
+      </p>
+    </div>
+
+    <div class="sysinfo card-console" appReveal [appRevealDelay]="120">
+      <div class="sysinfo-head">
+        <i class="bi bi-terminal"></i> neofetch
+      </div>
+      <div class="sysinfo-row" *ngFor="let row of sysinfo">
+        <span class="key">{{ row.key }}</span>
+        <span class="value">{{ row.value }}</span>
+      </div>
+    </div>
+  </div>
+</section>

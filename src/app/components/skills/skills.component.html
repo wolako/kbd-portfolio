@@ -1,0 +1,16 @@
+<section id="skills">
+  <div class="container-narrow">
+    <div class="eyebrow">ls -la skills/</div>
+    <h2 class="section-title">Compétences</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card card-console" *ngFor="let group of groups">
+        <div class="skill-path"><i class="bi bi-folder2-open"></i> {{ group.path }}</div>
+        <div class="skill-label">{{ group.label }}</div>
+        <div class="skill-tags">
+          <span class="tag" *ngFor="let item of group.items">{{ item }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

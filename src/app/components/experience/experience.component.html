@@ -1,0 +1,30 @@
+<section id="experience">
+  <div class="container-narrow">
+    <div class="eyebrow">git log --oneline</div>
+    <h2 class="section-title">Parcours</h2>
+
+    <div class="timeline">
+      <div class="entry" *ngFor="let exp of experiences; let i = index" appReveal [appRevealDelay]="i * 90">
+        <div class="marker" [class.current]="exp.current" [class.education]="exp.type === 'education'"></div>
+        <div class="entry-body card-console">
+          <div class="entry-head">
+            <div>
+              <h3 class="role">
+                <i class="bi bi-mortarboard-fill edu-icon" *ngIf="exp.type === 'education'"></i>
+                {{ exp.role }}
+              </h3>
+              <div class="org">{{ exp.org }}</div>
+            </div>
+            <div class="period" [class.current]="exp.current">
+              <span *ngIf="exp.current" class="status-dot"></span>
+              {{ exp.period }}
+            </div>
+          </div>
+          <ul *ngIf="exp.bullets?.length">
+            <li *ngFor="let b of exp.bullets">{{ b }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

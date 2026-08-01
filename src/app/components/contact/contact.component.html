@@ -1,0 +1,29 @@
+<section id="contact">
+  <div class="container-narrow contact-wrap">
+    <div class="eyebrow">contact --new</div>
+    <h2 class="section-title">Travaillons ensemble</h2>
+    <p class="lede">
+      Ouvert aux opportunités d'administrateur systèmes, de support IT ou de
+      développeur web. Réponse rapide garantie.
+    </p>
+
+    <div class="contact-card card-console" appReveal>
+      <a class="contact-row" [href]="'mailto:' + profile.email">
+        <i class="bi bi-envelope"></i>
+        <span>{{ profile.email }}</span>
+      </a>
+      <a class="contact-row" [href]="'tel:' + profile.phone">
+        <i class="bi bi-telephone"></i>
+        <span>{{ profile.phone }}</span>
+      </a>
+      <div class="contact-row static">
+        <i class="bi bi-geo-alt"></i>
+        <span>{{ profile.location }} — mobile pour toute opportunité</span>
+      </div>
+    </div>
+
+    <a class="btn-console primary" *ngIf="geo.isAfrica() !== false" [href]="profile.cvFile" download>
+      <i class="bi bi-download"></i> Télécharger le CV (PDF)
+    </a>
+  </div>
+</section>

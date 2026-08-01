@@ -1,0 +1,36 @@
+<section id="top" class="hero">
+  <div class="container-narrow hero-grid">
+    <div class="hero-copy">
+      <div class="terminal card-console">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">koffibenoît&#64;dzahini: ~</span>
+        </div>
+        <div class="terminal-body">
+          <p class="line"><span class="prompt">$</span> {{ typed }}<span class="caret">&#9608;</span></p>
+          <ng-container *ngIf="showAnswer">
+            <p class="answer name">{{ profile.name }}</p>
+            <p class="answer role">{{ profile.title }}</p>
+            <p class="answer tagline">{{ profile.tagline }}</p>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="hero-actions" *ngIf="showAnswer">
+        <a class="btn-console primary" *ngIf="geo.isAfrica() !== false" [href]="profile.cvFile" download>
+          <i class="bi bi-download"></i> Télécharger le CV
+        </a>
+        <a class="btn-console" href="#projects">
+          <i class="bi bi-arrow-down-right"></i> Voir mes projets
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stats" *ngIf="showAnswer">
+      <div class="stat card-console" *ngFor="let s of stats">
+        <div class="stat-value">{{ s.value }}</div>
+        <div class="stat-label">{{ s.label }}</div>
+      </div>
+    </div>
+  </div>
+</section>
