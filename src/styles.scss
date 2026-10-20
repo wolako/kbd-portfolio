@@ -4,10 +4,6 @@
 
 // ---------------------------------------------------------------------------
 // DESIGN TOKENS — thème "console d'exploitation"
-// Ancré dans le métier réel du sujet : administrateur systèmes devenu
-// développeur. Motif directeur : terminal, statut de service (up/down),
-// fiche "neofetch". Accent ambre (moniteur terminal), pas de vert/noir
-// générique "hacker", pas de crème/serif académique.
 // ---------------------------------------------------------------------------
 :root {
   --bg: #10151c;
@@ -30,8 +26,25 @@
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-sans: "IBM Plex Sans", -apple-system, Segoe UI, sans-serif;
 
-  --radius: 10px;
+  --radius: 14px;
   --container-max: 1140px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 * {
@@ -49,11 +62,6 @@ body {
   overflow-x: hidden;
   max-width: 100vw;
   background: var(--bg);
-  background-image:
-    linear-gradient(var(--border-soft) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
-  background-size: 44px 44px;
-  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-sans);
   font-size: 16px;
@@ -94,7 +102,6 @@ p {
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   color: var(--accent);
-  text-transform: none;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -157,6 +164,9 @@ section {
   color: var(--text-primary);
   transform: translateY(-1px);
 }
+.btn-console:active {
+  transform: scale(0.96);
+}
 .btn-console.primary {
   background: var(--accent);
   border-color: var(--accent);
@@ -189,25 +199,21 @@ section {
   }
 }
 
-@media (max-width: 768px) {
-  section {
-    padding: 3.5rem 0;
+@media (max-width: 767.98px) {
+  body {
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
   }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
+  section {
+    padding: 2.75rem 0;
+    scroll-margin-top: 64px;
+  }
+  .section-title {
+    margin-bottom: 1.75rem;
+  }
+  .card-console {
+    border-radius: 16px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
