@@ -26,9 +26,9 @@ export interface ProjectItem {
 
 export const PROFILE = {
   name: 'Koffi Benoît Dzahini',
-  handle: 'koffibenoît',
+  handle: 'koffibenoit',
   host: 'dzahini',
-  title: 'Administrateur Systèmes & Réseaux — Développeur Web',
+  title: 'Technicien Systèmes & Réseaux — Développeur Web',
   tagline:
     "J'assure la fiabilité des infrastructures et je construis les applications qui tournent dessus.",
   location: 'Lomé, Togo',
@@ -39,42 +39,65 @@ export const PROFILE = {
 };
 
 export const STAT_WIDGETS = [
-  { value: '3 ans', label: 'exp. cumulée' },
+  { value: '3 ans', label: 'systèmes & réseaux' },
   { value: '3 OS', label: 'Windows · Linux · macOS' },
-  { value: '2026', label: 'stack à jour' },
+  { value: '4 apps web', label: 'dont 1 en production' },
 ];
 
 export const SYSINFO = [
-  { key: 'user', value: 'koffibenoît@dzahini' },
-  { key: 'role', value: 'sysadmin → développeur' },
+  { key: 'user', value: 'koffibenoit@dzahini' },
+  { key: 'role', value: 'support IT / sysadmin → développeur web' },
   { key: 'os', value: 'Windows, Linux (Ubuntu), macOS' },
-  { key: 'stack', value: 'Angular · Node.js · Python' },
-  { key: 'uptime', value: '~3 ans (2017 – présent)' },
+  { key: 'stack', value: 'Angular · Node.js · PostgreSQL · Docker' },
+  { key: 'uptime', value: '~3 ans (2021 – 2024) · freelance depuis 2024' },
   { key: 'locale', value: 'Lomé, TG' },
 ];
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
     path: '~/systeme',
-    label: 'Systèmes & Réseaux',
+    label: 'Systèmes & Virtualisation',
     items: [
-      'Windows Server 2019',
-      'Linux (Debian, Ubuntu, RHEL)',
+      'Windows Server 2019/2022/2025',
+      'Active Directory, GPO',
+      'DNS, DHCP, RDP',
+      'Linux (Ubuntu, Debian, CentOS)',
       'macOS',
-      'Proxmox / VMware / VirtualBox',
-      'CCNA/CCNP, BGP, OSPF, VLAN',
-      'VPN IPSec/SSL, pfSense, OPNsense',
-      'Docker, Kubernetes, Ansible',
+      'Proxmox / VMware ESXi / Hyper-V / VirtualBox',
+      'Sauvegardes (données et serveurs)',
+    ],
+  },
+  {
+    path: '~/reseaux',
+    label: 'Réseaux & Sécurité',
+    items: [
+      'Routing & Switching : BGP, OSPF, EIGRP, VLAN',
+      'Cisco (acquis CCNA, labos)',
+      'MikroTik',
+      'VPN IPSec/SSL',
+      'pfSense, OPNsense',
+      'SSH, IPTables',
+    ],
+  },
+  {
+    path: '~/supervision-deploiement',
+    label: 'Supervision & Déploiement',
+    items: [
+      'Prometheus / Grafana',
+      'Cacti (SNMP, RRDTool)',
+      'Docker, Docker Compose',
+      'Nginx',
+      'VPS Linux (Ubuntu)',
     ],
   },
   {
     path: '~/developpement',
     label: 'Développement Web',
     items: [
-      'Angular (Components, RxJS)',
-      'Node.js / Express (REST API)',
-      'JavaScript (ES6)',
-      'Python — intermédiaire',
+      'Angular, TypeScript',
+      'Node.js / Express (API REST)',
+      'JavaScript (ES6), HTML & CSS',
+      'Python (en progression)',
       'MySQL / PostgreSQL / Prisma ORM',
       'Git / GitHub',
     ],
@@ -85,22 +108,32 @@ export const SKILL_GROUPS: SkillGroup[] = [
     items: [
       'Claude Code',
       'Claude AI',
-      'Vibe coding',
-      'Prometheus / Grafana',
-      'Cacti (SNMP, RRDTool)',
+      'Développement assisté par IA',
+      'Prototypage rapide',
     ],
   },
 ];
 
 export const EXPERIENCES: ExperienceItem[] = [
   {
-    role: 'Développement autodidacte & veille technologique',
-    org: 'Projets personnels',
-    period: 'Avril 2024 — Présent',
+    role: 'Développeur Freelance',
+    org: 'Projets informatiques',
+    period: '2024 — Présent',
     current: true,
     bullets: [
-      "Conception d'applications web avec Angular et Express.js (interface responsive, API REST).",
-      "Déploiement d'une infrastructure mail containerisée sécurisée (Docker, Postfix/Dovecot, SSL/TLS).",
+      "Conception et développement d'applications web avec Angular, Node.js/Express et PostgreSQL.",
+      "Développement d'API REST et intégration de bases de données.",
+      'Déploiement et maintenance sur VPS Linux avec Docker, Docker Compose et Nginx.',
+      "Gestion autonome des projets, de l'analyse du besoin jusqu'au déploiement.",
+    ],
+  },
+  {
+    role: 'Autoformation & veille technologique',
+    org: 'Laboratoires et projets personnels',
+    period: '2024 — Présent',
+    bullets: [
+      'Laboratoires virtuels Windows Server et Linux (Active Directory, GPO, DNS) pour entretenir mes compétences systèmes et réseaux.',
+      "Serveur mail en production sur VPS : infrastructure containerisée (Docker, Postfix/Dovecot/Roundcube, Nginx, SSL/TLS Let's Encrypt).",
       'Montée en compétences en Python et exploration du développement assisté par IA (Claude Code, Claude AI).',
     ],
   },
@@ -109,9 +142,12 @@ export const EXPERIENCES: ExperienceItem[] = [
     org: 'CAMINFO',
     period: 'Février 2022 — Mars 2024',
     bullets: [
-      'Installation, configuration et maintenance de serveurs Linux et Windows Server 2019.',
-      "Virtualisation (Proxmox, VMware ESXi) et haute disponibilité des infrastructures clients.",
-      'Support utilisateur niveau 1/2 : assistance technique et résolution d’incidents.',
+      'Installation, configuration et maintenance de serveurs Linux et Windows Server 2019, en environnement multiclient.',
+      'Maintien en conditions opérationnelles des infrastructures clients.',
+      'Gestion des équipements réseau (routeurs, switchs, pare-feux) ; administration de base Active Directory et GPO.',
+      'Redondance des services pour améliorer la disponibilité.',
+      'Virtualisation (Proxmox, VMware ESXi, Hyper-V, VirtualBox) : déploiement de VM Windows Server, Debian, Ubuntu, CentOS.',
+      'Assistance à distance des utilisateurs et des environnements clients.',
     ],
   },
   {
@@ -119,8 +155,9 @@ export const EXPERIENCES: ExperienceItem[] = [
     org: 'Café Informatique & Télécommunication',
     period: 'Mars 2021 — Décembre 2021',
     bullets: [
-      'Supervision du backbone réseau via UNMS, dépannage du réseau C@fenet.',
-      'Configuration d’équipements MikroTik et assistance téléphonique clients.',
+      'Premiers dépannages et suivi des incidents réseau ; surveillance du backbone via UNMS.',
+      'Configuration et maintenance de routeurs et switchs MikroTik ; administration d’un serveur Ubuntu.',
+      'Assistance téléphonique clients (diagnostic des problèmes de connexion) et appui à distance aux techniciens terrain.',
     ],
   },
   {
@@ -129,7 +166,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     period: 'Mars 2017 — Mai 2017',
     bullets: [
       'Câblage et configuration d’équipements réseau (routeurs, switchs, serveurs).',
-      'Déploiement de protocoles de sécurité (SSH, IPTables) et de serveurs web (Apache, Nginx).',
+      'Accès sécurisés SSH, règles de pare-feu IPTables, serveurs web Apache et Nginx.',
     ],
   },
   {
@@ -153,7 +190,7 @@ export const PROJECTS: ProjectItem[] = [
     featured: true,
     tagline: 'Plateforme de réservation de billets de bus',
     description:
-      "Application web de réservation de trajets en bus au Togo. Les compagnies de transport créent leur compte, publient leurs trajets avec dates de départ, tarifs et nombre de sièges disponibles. Les clients consultent les trajets, choisissent leur numéro de siège et achètent leur billet en ligne via un paiement sécurisé (FedaPay). Tableaux de bord dédiés pour les compagnies et l'administration.",
+      "Application web de réservation de trajets en bus au Togo. Les compagnies de transport créent leur compte, publient leurs trajets avec dates de départ, tarifs et nombre de sièges disponibles. Les clients consultent les trajets, choisissent leur numéro de siège et achètent leur billet en ligne via un paiement sécurisé (CinetPay). Tableaux de bord dédiés pour les compagnies et l'administration.",
     stack: ['Angular', 'Node.js', 'Express', 'PostgreSQL', 'SQL natif'],
     link: 'https://emozozo.com/',
     linkLabel: 'Visiter le site',
@@ -185,9 +222,9 @@ export const PROJECTS: ProjectItem[] = [
   {
     name: 'Infrastructure Mail Containerisée',
     status: 'technical',
-    tagline: 'Stack mail sécurisée en conteneurs',
+    tagline: 'Stack mail sécurisée, en production sur VPS',
     description:
-      "Déploiement d'une stack mail complète (Roundcube, Dovecot, Postfix) en conteneurs Docker, avec chiffrement SSL/TLS et intégration à un reverse proxy Nginx existant.",
-    stack: ['Docker', 'Postfix', 'Dovecot', 'Nginx', "Let's Encrypt"],
+      "Serveur mail complet (Postfix, Dovecot, Roundcube) déployé en production sur un VPS Linux avec Docker et Docker Compose. Nginx en reverse proxy, communications sécurisées par SSL/TLS (Let's Encrypt).",
+    stack: ['Docker', 'Postfix', 'Dovecot', 'Roundcube', 'Nginx', "Let's Encrypt"],
   },
 ];
