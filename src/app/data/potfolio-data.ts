@@ -35,7 +35,7 @@ export const PROFILE = {
   email: 'kbdzahini@gmail.com',
   phone: '+228 90 47 88 14',
   availability: 'Disponible',
-  cvFile: 'assets/cv/CV_Koffi_Benoit_DZAHINI',
+  cvFile: 'assets/cv/CV_Koffi_Benoit_DZAHINI.pdf',
 };
 
 export const STAT_WIDGETS = [
