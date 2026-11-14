@@ -3,8 +3,8 @@
     <div class="eyebrow">contact --new</div>
     <h2 class="section-title">Travaillons ensemble</h2>
     <p class="lede">
-      Ouvert aux opportunités d'administrateur systèmes, de support IT ou de
-      développeur web. Réponse rapide garantie.
+      Ouvert aux opportunités de technicien systèmes et réseaux ou de
+      développeur web. N'hésitez pas à me contacter.
     </p>
 
     <div class="contact-card card-console" appReveal>
@@ -15,6 +15,10 @@
       <a class="contact-row" [href]="'tel:' + profile.phone">
         <i class="bi bi-telephone"></i>
         <span>{{ profile.phone }}</span>
+      </a>
+      <a class="contact-row" [href]="profile.linkedin" target="_blank" rel="noopener">
+        <i class="bi bi-linkedin"></i>
+        <span>LinkedIn</span>
       </a>
       <div class="contact-row static">
         <i class="bi bi-geo-alt"></i>
