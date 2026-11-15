@@ -70,6 +70,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
     ],
     lab: [
       'Windows Server 2022/2025',
+      'RDP, serveur d\'impression',
       'Debian, CentOS',
       'Proxmox, VMware ESXi, Hyper-V',
       'Bash, PowerShell',
@@ -142,11 +143,11 @@ export const EXPERIENCES: ExperienceItem[] = [
     org: 'CAMINFO — prestataire de services informatiques',
     period: 'Février 2022 — Mars 2024',
     bullets: [
-      "Intervention sur le terrain chez des entreprises clientes de 10 à 20 employés : maintenance de leurs serveurs Ubuntu et d'un serveur Windows Server 2019 chez un client.",
-      "Installation d'Active Directory chez un client : création des utilisateurs, groupes, unités d'organisation, GPO et partages de fichiers.",
-      'Configuration et gestion de routeurs et de switchs ; maintien en conditions opérationnelles des infrastructures clients.',
-      'Assistance des utilisateurs à distance, dont la connexion aux ressources de leur entreprise.',
-      'Mise en place de solutions de redondance pour améliorer la disponibilité des services.',
+      "Support et maintenance sur le terrain, sur site et à distance, auprès d'entreprises clientes de 10 à 20 employés, avec des serveurs Ubuntu et un serveur Windows Server 2019 chez un client.",
+      "Besoin de centraliser les utilisateurs et les accès chez un client → installation d'Active Directory (utilisateurs, groupes, unités d'organisation, GPO) et mise en place des partages de fichiers → comptes et accès aux ressources centralisés.",
+      "Client ne parvenant pas à se connecter à ses ressources → assistance de l'utilisateur pour la connexion → connexion établie et accès à ses ressources.",
+      "Configuration et maintenance des serveurs ; configuration et gestion de routeurs, switchs et pare-feux ; maintien en conditions opérationnelles des infrastructures clients.",
+      "Mise en place de solutions de redondance pour améliorer la disponibilité des services.",
     ],
   },
   {
@@ -154,10 +155,11 @@ export const EXPERIENCES: ExperienceItem[] = [
     org: 'Café Informatique & Télécommunication (fournisseur d’accès Internet)',
     period: 'Mars 2021 — Décembre 2021',
     bullets: [
-      'Supervision du backbone via UNMS : détection des équipements réseau en panne et remise en service.',
-      'Redémarrage ciblé de serveurs, routeurs et équipements pour améliorer la connexion des clients.',
-      'Configuration et maintenance de routeurs et switchs MikroTik ; administration d’un serveur Ubuntu.',
-      'Assistance téléphonique aux techniciens lors de leurs interventions sur les équipements réseau, chez les clients et sur les sites de la société.',
+      "Équipements réseau en panne sur le backbone → surveillance via UNMS, détection et remise en service → connexion rétablie pour les clients.",
+      "Connexion de clients à améliorer → redémarrage ciblé de serveurs, routeurs et équipements → connexion améliorée.",
+      "Techniciens en intervention chez un client ou sur un site de la société, besoin d'aide pour configurer un équipement réseau → assistance par téléphone → équipement configuré.",
+      "Premiers dépannages et suivi des incidents réseau ; assistance téléphonique aux clients pour diagnostiquer et résoudre leurs problèmes de connexion.",
+      "Configuration et maintenance de routeurs MikroTik"
     ],
   },
   {
@@ -165,8 +167,11 @@ export const EXPERIENCES: ExperienceItem[] = [
     org: 'ONG Carrefour Tiers Monde',
     period: 'Mars 2017 — Mai 2017',
     bullets: [
-      'Câblage et configuration d’équipements réseau (routeurs, switchs, serveurs).',
-      'Accès sécurisés SSH, règles de pare-feu IPTables, serveurs web Apache et Nginx.',
+      "Câblage et configuration d'équipements réseau (routeurs, switchs, serveurs).",
+      "Accès sécurisés SSH, règles de pare-feu IPTables",
+      "Configuration des serveurs web Apache et Nginx.",
+      "Formation d'apprenants aux outils Microsoft Office.",
+      "Maintenance d'ordinateurs."
     ],
   },
   {
@@ -198,7 +203,7 @@ export const PROJECTS: ProjectItem[] = [
     status: 'live',
     tagline: 'Réservation de billets de bus — en ligne, lancement en pause',
     description:
-      "Application web de réservation de trajets en bus au Togo, développée pour un porteur de projet et mise en ligne ; le lancement commercial est actuellement en pause. Les compagnies publient leurs trajets (dates, tarifs, sièges disponibles) ; les clients choisissent leur siège et achètent leur billet en ligne via un paiement sécurisé (FedaPay). Tableaux de bord pour les compagnies et l'administration.",
+      "Application web de réservation de trajets en bus au Togo, développée pour un porteur de projet et mise en ligne ; le lancement commercial est actuellement en pause. Les compagnies publient leurs trajets (dates, tarifs, sièges disponibles) ; les clients choisissent leur siège et achètent leur billet en ligne via un paiement sécurisé (CinetPay). Tableaux de bord pour les compagnies et l'administration.",
     stack: ['Angular', 'Node.js', 'Express', 'PostgreSQL', 'SQL natif'],
     link: 'https://emozozo.com/',
     linkLabel: 'Visiter le site',
