@@ -39,7 +39,7 @@ export const PROFILE = {
   phone: '+228 90 47 88 14',
   linkedin: 'https://linkedin.com/in/koffi-benoît-dzahini',
   availability: 'Disponible',
-  cvFile: 'assets/cv/CV_Koffi_Benoit_DZAHINI.pdf',
+  cvFile: 'assets/cv/CV_Koffi_Benoit_dzahini.pdf',
 };
 
 export const STAT_WIDGETS = [
